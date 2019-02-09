@@ -1,0 +1,6 @@
+_site
+.sass-cache
+.jekyll-metadata
+.vscode
+
+minima-2.5.0

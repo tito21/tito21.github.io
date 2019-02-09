@@ -1,7 +1,12 @@
-# Alberto Di Biase
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-Estudiante de Ingenieria Biomedica en la Pontificia Universidad Católica de Chile (UC). Mi pasión es programar, los numeros.
+layout: home
+---
 
-Si eres estdiante de la UC descarga la extencion [UCaccess](https://chrome.google.com/webstore/detail/uc-access/leoijilpkelhgbhkneanedjffjhedcoa)
+# Hola, soy Alberto Di Biase
 
-Mi CV: 
+Vivo en Santiago de Chile y estudio Ingeniería Biomédica en la Pontificia Universidad Católica de Chile (UC).
+Cuando no estoy estudiando, escribo en esta pagina sobre Python, Machine Learning, Wolfram Mathematica y otros
+temas.

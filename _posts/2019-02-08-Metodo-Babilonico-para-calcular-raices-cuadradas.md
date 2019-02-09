@@ -65,6 +65,7 @@ $$x_1 = x_0 - f(x_0)/f'(x_0)$$
 Finalmente remplazando con la función $$f(x)$$ encontramos que luego de $$k$$ iteraciones una aproximación para la raíz de $$S$$ esta dada por las siguientes ecuaciones (¿puedes ver porque?)
 
 $$x_{k} = \frac{S+x_{k-1}^2}{2x_{k-1}}$$
+
 $$\sqrt{S} =  \lim_{k \rightarrow \infty}x_k$$
 
 

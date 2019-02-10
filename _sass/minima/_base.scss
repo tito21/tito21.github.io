@@ -253,3 +253,15 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
+
+/**
+ * Special boxed notes in posts
+ */
+.boxed {
+  border: 3px solid $grey-color-light;
+  border-radius: 10px;
+  background-color: #eef;
+  padding: 5px 40px 5px 40px;
+  color: rgb(22, 22, 22);
+  text-align: center;
+}

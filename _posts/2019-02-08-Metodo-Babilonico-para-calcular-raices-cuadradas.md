@@ -51,7 +51,7 @@ plt.show()
 ```
 
 
-![png](/assets/posts/output_1_0.png)
+![png](/assets/posts/metodo-babilonico/output_1_0.png)
 
 
 El primer paso es partir de un valor inicial $$x_0$$. Luego podemos aproximar la función en este punto con su linea tangente. Usando la derivada sabemos que la recta tangente a este punto es
@@ -91,7 +91,7 @@ plt.show()
 ```
 
 
-![png](/assets/posts/output_3_0.png)
+![png](/assets/posts/metodo-babilonico/output_3_0.png)
 
 
 ## Implementación en Python
@@ -143,4 +143,6 @@ print(sqrt(2))
     1.4142135623746899
 
 
-En este cuaderno aprendimos como deducir el metodo Babilónico para encontrar raíces cuadradas. El metodo de Newton-Rapson utilizado se puede aplicar para encontrar las soluciones de una gran cantidad de ecuaciones usadas en la practica incluyendo aplicaciones en optimización.
+En este cuaderno aprendimos como deducir el metodo Babilónico para encontrar raíces cuadradas.
+El metodo de Newton-Rapson utilizado se puede aplicar para encontrar las soluciones de una gran cantidad de ecuaciones usadas en la practica incluyendo aplicaciones en optimización.
+Puedes descargar este articulo como un cuaderno [aquí](/assets/posts/metodo-babilonico/Metodo-de-Babilonia-para-calcular-raices-cuadradas.ipynb)

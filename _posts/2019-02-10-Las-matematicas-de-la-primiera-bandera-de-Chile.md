@@ -44,7 +44,7 @@ Graphics[{White, Rectangle[{0, 0}, {largo, 1}], RGBColor["#d52b1e"],
 ```
 <div class="boxed">
 <h4>Bandera de la independencia</h4>
-<img alt="bandera de la independencia generada" src="/assets/posts/bandera-ind.svg" style="width: 100%;"/>
+<img alt="bandera de la independencia generada" src="/assets/posts/bandera-independencia/bandera-ind.svg" style="width: 100%;"/>
 
 <h4>Bandera actual</h4>
 <img alt="bandera actual" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" style="width: 100%;"/>

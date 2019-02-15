@@ -22,9 +22,11 @@ layout: default
   <div class="post-footer">
     <div class="categories">
       Categorías:
+      <ul>
       {%- for cat in page.categories -%}
-        <span><a href="/category/{{cat}}">{{ cat }}</a></span>
+        <li><a href="/category/{{cat}}">{{ cat }}</a></li>
       {%- endfor -%}
+    </ul>
     </div>
   </div>
 

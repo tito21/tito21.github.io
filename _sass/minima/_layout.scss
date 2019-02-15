@@ -261,11 +261,17 @@
 
 .post-footer {
 
-  .categories > span {
-    padding: $base-font-size * 0.25;
-    border-radius: $base-font-size * 0.5;
-    background: $grey-color-light;
-    margin-left: $base-font-size;
+  .categories > ul {
+    list-style-type: none;
+    
+    li {
+      float: left;
+      padding: $base-font-size * 0.25;
+      border-radius: $base-font-size * 0.5;
+      background: $grey-color-light;
+      margin-left: $base-font-size;
+      margin-top: $base-font-size*0.5;
+    }
   }
 }
 

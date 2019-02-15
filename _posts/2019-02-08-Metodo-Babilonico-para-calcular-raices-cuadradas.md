@@ -4,7 +4,7 @@ title: "Método Babilónico para calcular raíces cuadradas"
 slug: "metodo babilonico"
 date: 2019-02-08 22:22:43 -0300
 use_math: true
-categories: ["Python", "algoritmo", "programación"]
+categories: ["Python", "algoritmo", "programacion"]
 tags: ["numpy", "raíz", "babilonico", "newton-raphson"]
 ---
 # ¿Cómo calcular $$\sqrt{2}$$?

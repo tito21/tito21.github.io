@@ -22,11 +22,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tito21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: tito21
+facebook_username: alberto.di.b.o
 
 # Build settings
 markdown: kramdown
 theme: minima
 permalink: :slug
+google_analytics: UA-134614584-1
+
 # theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed

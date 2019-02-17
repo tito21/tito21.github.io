@@ -29,7 +29,7 @@ Finalmente la estrella de cinco puntas se construye uniendo las diagonales alter
 
 Con el siguiente código de`Mathematica` podemos generar la bandera de la independencia
 
-``` mathematica
+```mathematica
 largo = (2 + Sqrt[5])/Sqrt[10 - 2 Sqrt[5]]; largoazul = 5^(1/4)/
  Sqrt[2 + Sqrt[5]];
 penOut = CirclePoints[{0.25/largoazul, 0.75}, {0.25/GoldenRatio,

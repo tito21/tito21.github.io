@@ -27,7 +27,7 @@ facebook_username: alberto.di.b.o
 # Build settings
 markdown: kramdown
 theme: minima
-permalink: :slug
+permalink: /posts/:slug
 google_analytics: UA-134614584-1
 
 # theme: jekyll-theme-minimal

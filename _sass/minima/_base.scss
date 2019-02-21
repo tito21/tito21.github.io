@@ -261,7 +261,8 @@ table {
   border: 3px solid $grey-color-light;
   border-radius: 10px;
   background-color: #eef;
-  padding: 5px 40px 5px 40px;
+  padding: ($spacing-unit / 3) ($spacing-unit / 2);;
+  margin-bottom: $spacing-unit;
   color: rgb(22, 22, 22);
   text-align: center;
 }

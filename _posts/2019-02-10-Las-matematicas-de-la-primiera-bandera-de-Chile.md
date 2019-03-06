@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Las matemáticas de la bandera de Independencia de Chile"
-slug: "bandera de chile"
+slug: "bandera de independencia de chile razon aurea"
 date: 2019-02-10 04:22:43 -0300
 use_math: true
 categories: ["Mathematica", "números especiales"]
@@ -11,7 +11,7 @@ tags: ["matematicas"]
 # Las proporciones de la bandera de Chile
 
 Inspirado por la asombrosa descripción de las proporciones de la bandera de Independencia de Chile en el primer capitulo[^1] del excelente libro de Andrés Navas (*"Un viaje a las ideas 33 historias matemáticas asombrosas"*) decidí recrear la bandera en `Mathematica`.
-La bandera usada durante la Patria Nueva fue encomendada por Bernardo O'Higgins y oficializada como la bandera del país el 12 de febrero de 1818 día del juramento de Independencia.
+La bandera usada durante la Patria Nueva fue encomendada por Bernardo O'Higgins y oficializada como la bandera del país el 12 de febrero de 1818, día del juramento de Independencia.
 Esta bandera tiene los mismos colores y forma de que la bandera actual pero esta diseñada usando la elegancia de proporción áurea.
 La proporción áurea es considerada la más bella y esta presente en la naturaleza.
 Esta es la razón en la que se divide un segmento tal que la razón entre las partes es igual a la razón entre el lado mayor y el largo total.

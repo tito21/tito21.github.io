@@ -4,7 +4,7 @@ title: "Visualización de filtros de redes neuronales en Keras"
 slug: "visualizacion-de-filtros-en-keras"
 date: 2019-02-18 22:22:43 -0300
 use_math: true
-categories: ["Python", "redes neuronales", "programacion", "visualización"]
+categories: ["Python", "redes neuronales", "programacion", "visualización", "tutorial"]
 tags: ["CNN", "AI", "ML", "redes neuronales", "MRI"]
 ---
 # ¿Qué aprenden las redes neuronales?

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "El tamaño del conjunto complejo"
+slug: "tamano-conjunto-complejo"
 date: 2019-06-24 22:22:43 -0300
 use_math: true
 categories: ["matemáticas", "números"]

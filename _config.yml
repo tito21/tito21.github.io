@@ -20,6 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
     Universidad Católica de Chile (UC). Mis pasiones son programar, los numeros y la enseñanza.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tito21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+lang: es-CL
+
 # twitter_username: jekyllrb
 github_username: tito21
 facebook_username: alberto.di.b.o

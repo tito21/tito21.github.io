@@ -4,7 +4,7 @@ title: "Las matemáticas de la bandera de Independencia de Chile"
 slug: "bandera de independencia de chile razon aurea"
 date: 2019-02-10 04:22:43 -0300
 use_math: true
-categories: ["Mathematica", "números especiales"]
+categories: ["Mathematica", "numeros especiales", "numeros", "matematicas"]
 tags: ["matematicas"]
 ---
 

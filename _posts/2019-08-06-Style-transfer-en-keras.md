@@ -190,7 +190,7 @@ Después de aproximadamente 10 minutos en una GPU este es el resultado
 
 Nada mal para solo unas 100 lineas de código.
 Ahora tu también puedes usar esta técnica para convertir tus fotos en obras de arte.
-Prueba modificando los parámetros del algoritmo. ¿Como se comporta si $$lambda$$ disminuye?
+Prueba modificando los parámetros del algoritmo. ¿Como se comporta si $$\lambda$$ disminuye?
 ¿Qué pasa si usas otras capas para calcular el estilo?.
 
 Como vimos en este articulo las características aprendidas por redes de CNN son capaces de generalizarse para

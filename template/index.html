@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=$style-css$>
+
+        <!-- Mathjax -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!-- -->
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:300,400,700&display=swap" rel="stylesheet">
+        <style>${highlighting-css}</style>
+
+        $if(description)$
+        <meta name="description" content="$description$">
+        $endif$
+        <meta>
+        $for(author)$
+        <meta name="author" content="$author$">
+        $endfor$
+        $if(date)$
+        <meta name="dcterms.date" content="$date-meta$">
+        $endif$
+        <title>$if(title)$$title$ - $endif$$site-title$</title>
+
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">
+                <a href=$site-root$/index.html>$site-title$</a>
+            </h1>
+            <nav>
+                <ul class="nav-list">
+                    $for(nav-items)$
+                        <li><a href=$site-root$/$nav-items.url$>$nav-items.name$</a></li>
+                    $endfor$
+                </ul>
+            </nav>
+        </header>
+        <article class="main-article">
+            <h1 class="article-title">$title$</h1>
+            <div class="sub-title">
+                $if(date)$
+                    <span>$date$</span>
+                $endif$
+                <ul>
+                    $for(categories)$
+                        <li><a href=$site-root$/categories.html#$categories$>$categories$</a></li>
+                    $endfor$
+                </ul>
+            </div>
+
+$body$
+
+        </article>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-colm">
+                    <a href=$site-root$>$site-title$</a>
+                    <ul>
+                        $for(nav-items)$
+                            <li><a href=$nav-items.url$>$nav-items.name$</a></li>
+                        $endfor$
+                    </ul>
+                </div>
+                <div class="footer-colm">
+                    Redes Sociales:
+                    <ul>
+                        $for(social-links)$
+                            <li><a href=$social-links.url$>$social-links.name$</a></li>
+                        $endfor$
+                    </ul>
+                </div>
+                <div class="footer-colm" style="text-align: left;">
+                    $footer-description$
+                </div>
+            </div>
+        </footer>
+        <div class="close-message">
+            <p>Todo el contenido de esta pagina esta bajo la Licencia <a
+            href="http://creativecommons.org/licenses/by-sa/4.0/">CC-by-sa</a> y
+            el código bajo la licencia <a
+            href="https://choosealicense.com/licenses/mit/">MIT</a></p>
+
+                <p>Sitio alojado en <a href="github.com">GitHub</a> y producido
+                con YASSG</p>
+        </div>
+    </body>
+
+</html>

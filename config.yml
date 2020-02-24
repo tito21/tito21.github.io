@@ -1,0 +1,19 @@
+site-root: "http://192.168.0.27:8000"
+site-title: Alberto Di Biase
+author: Alberto Di Biase
+
+footer-description: >
+  Estudiante de Ingeniería Biomédica en la Pontificia Universidad Católica de
+  Chile (UC). Mis pasiones son programar, los numeros y la enseñanza.
+
+style-css: ../assets/style.css
+
+
+social-links:
+- name: github
+  url: https://github.com/tito21/
+- name: reddit
+  url: https://www.reddit.com/user/AlbertoDiBiase
+
+# Blank lines to add more stuff
+

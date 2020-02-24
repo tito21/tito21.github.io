@@ -6,6 +6,11 @@ date: 2019-02-10 04:22:43 -0300
 use_math: true
 categories: ["Mathematica", "numeros especiales", "numeros", "matematicas"]
 tags: ["matematicas"]
+description: La primera bandera de Chile tenia unas proporciones muy distintas
+             a las actuales. La bandera estaba construida a partir de la
+             razón áurea. En este articulo la describiré basándome
+             principalmente en la descripción del libro de Andres Navas al
+             respecto.
 ---
 
 # Las proporciones de la bandera de Chile
@@ -24,7 +29,7 @@ La estrella en la bandera de la independencia esta formada a partir de una divis
 
 $$ \frac{\sqrt[\leftroot{-2}\uproot{2}4]{5}}{\sqrt{2+\sqrt{5}}} $$
 
-lo que permite que las diagonales se encuentren en ángulos de $$70^\circ$$ y $$180^\circ$$, luego se pueden formar 5 lineas que se cruzan en el origen en $$32^\circ$$.
+lo que permite que las diagonales se encuentren en ángulos de $70^\circ$ y $180^\circ$, luego se pueden formar 5 lineas que se cruzan en el origen en $32^\circ$.
 Finalmente la estrella de cinco puntas se construye uniendo las diagonales alternadas (en los artículos citados puedes ver un diagrama de esto para que lo entiendas mejor).
 
 Con el siguiente código de`Mathematica` podemos generar la bandera de la independencia

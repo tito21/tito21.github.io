@@ -1,11 +1,23 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-title: "Hola, soy Alberto Di Biase"
+title: Hola, soy Alberto Di Biase
+nav: false
 ---
 
+Vivo en Santiago de Chile y estudio Ingeniería Biomédica en la Pontificia
+Universidad Católica de Chile (UC). Cuando no estoy estudiando, escribo en esta
+pagina sobre Python, Machine Learning, Wolfram Mathematica y otros temas.
 
-Vivo en Santiago de Chile y estudio Ingeniería Biomédica en la Pontificia Universidad Católica de Chile (UC).
-Cuando no estoy estudiando, escribo en esta pagina sobre Python, Machine Learning, Wolfram Mathematica y otros
-temas.
+$for(posts)$
+
+<!-- Using /nowrap pipe to prevent pandoc inserting new lines -->
+
+## [$posts.title/nowrap$]($posts.url/nowrap$)
+
+::: sub-title
+$posts.date$
+:::
+
+:::: description
+$posts.description$
+::::
+$endfor$

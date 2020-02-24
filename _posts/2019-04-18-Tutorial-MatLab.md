@@ -5,6 +5,10 @@ date: 2019-04-26 22:22:43 -0300
 use_math: true
 categories: ["MatLab", "tutorial", "programacion"]
 tags: ["matlab", "introducción", "básico", "aprender"]
+description: MatLab es un lenguaje de programación especializado en aplicaciones
+             científicas y de investigación. Es muy utilizado en las escuelas de
+             ingeniería de todo el mundo para modelar y analizar todo tipo de
+             situaciones.
 ---
 
 MatLab es un lenguaje de programación especializado en aplicaciones científicas
@@ -115,7 +119,7 @@ x'*b
 ans = 45
 ```
 
-Aplicando lo que hemos hecho hasta ahora para resolvamos el sistema $$Ax = b$$
+Aplicando lo que hemos hecho hasta ahora para resolvamos el sistema $Ax = b$
 
 ```matlab
 x = inv(A)*b
@@ -237,9 +241,9 @@ y seguramente alguien ya lo pregunto en *stackoverflow* o en los foros de Matlab
 # Ejercicio
 
 Grafique la trayectoria de una partícula lanzada desde el piso con velocidad
-inicial $$v_0 = 10$$ y $$50^{\circ}$$ de inclinación. ¿En que momento alcanza
+inicial $v_0 = 10$ y $50^{\circ}$ de inclinación. ¿En que momento alcanza
 su altura maxima? **Hint**: recuerde que la trayectoria de una partícula esta
-dada por $$\{ x_0 + v_{x0} t, y_0 + v_{y0} - \frac{1}{2} gt^2 \}$$, y el tiempo
-total de vuelo es $$t_f = 2 \frac{v_{y0}}{g}$$.
+dada por $\{ x_0 + v_{x0} t, y_0 + v_{y0} - \frac{1}{2} gt^2 \}$, y el tiempo
+total de vuelo es $t_f = 2 \frac{v_{y0}}{g}$.
 
 [Respuesta](../assets/posts/intro-matlab/respuesta.m)

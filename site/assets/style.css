@@ -1,0 +1,196 @@
+
+/*
+ Color pallet
+  - #ff5800
+  - #0c4767
+ */
+
+:root {
+    --emph: #ff5800;
+    --emph-rgb: rgb(255, 88, 0);
+    --emph-darker: rgb(195, 38, 0);
+    --dots-size: 5px;
+    --dots-spc: 20px;
+    --max-content-width: 800px;
+}
+
+body {
+    margin: 0 auto;
+    max-width: var(--max-content-width);
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Polka dots */
+    background: repeating-radial-gradient(var(--emph), var(--emph) calc(var(--dots-size) - 0.5px), white var(--dots-size), white var(--dots-spc));
+    background-size: var(--dots-spc) var(--dots-spc);
+    /* background-position: calc(var(--matr-size) / 2) calc(var(--matr-size) / 2); */
+}
+
+a {
+    text-decoration: none;
+    color: var(--emph);
+}
+
+a:hover {
+    text-decoration: underline dashed;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+}
+
+img {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 2%;
+    background-color: var(--emph);
+    color: white;
+}
+
+header h1 {
+    float: left;
+    margin: 20px auto 20px auto;
+}
+header a, header a:visited {
+    color: white;
+}
+
+.nav-list {
+    float: right;
+    list-style: none;
+    padding-top: 20px;
+    margin: 20px auto 20px auto;
+}
+.nav-list>li {
+    float: right;
+    padding-left: 1em;
+    margin: 0;
+}
+
+.main-article {
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em;
+    border: 5px dashed var(--emph);
+    background-color: white;
+}
+
+.main-article a:visited {
+    color: var(--emph-darker);
+    /* color: #6c25f1; */
+}
+
+h1.article-title {
+    font-size: 3em;
+    margin-bottom: 0.1em;
+}
+
+.sub-title {
+    font-size: 0.75em;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-title {
+    margin: 0;
+}
+
+.sub-title ul, .sub-title p {
+    margin: 0 2em 0 1em;
+    padding-left: 0;
+}
+.sub-title li {
+    float: left;
+    list-style: none;
+    margin: 0 2em 0 0;
+}
+
+/* add space to source code */
+div.sourceCode {
+    padding: 1em;
+}
+
+table {
+    width: fit-content;
+    margin: 1em auto;
+    border-collapse: collapse;
+}
+
+thead th {
+    border-bottom: black solid;
+}
+
+tr:nth-child(even) {
+    background: #CCC
+}
+
+tr:nth-child(odd) {
+    background: #FFF
+}
+
+th {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+footer {
+    background-color: white;
+    color: #333333;
+    border-bottom: 2px solid var(--emph);
+}
+
+.footer-container {
+    padding: 10px;
+    display: flex;
+}
+
+.footer-colm {
+    margin: 0 2%;
+    width: 30%;
+}
+
+.close-message {
+    font-size: 0.75em;
+    color: #757575;
+    text-align: center;
+    background-color: white;
+}
+
+/* Should be var(--max-content-width) but var is not supported in media queries
+https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media (max-width: 800px) {
+    body {
+        margin: 0;
+        background: transparent;
+    }
+    header {
+        text-align: center;
+    }
+    header h1 {
+        float: unset;
+    }
+    .nav-list {
+        padding: 0;
+        float: none;
+    }
+    .nav-list > li {
+        float: unset;
+        padding: 0;
+    }
+
+}

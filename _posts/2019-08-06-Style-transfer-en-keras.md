@@ -11,7 +11,7 @@ description: Veremos como usar una red neuronal (CNN) para generar obras de arte
              cualquiera.
 ---
 
-En un post [anterior]({{ site.baseurl }}{% post_url 2019-02-20-Visualizacion-de-filtros-de-redes-neuronales-en-keras %})
+En un post [anterior](2019-02-20-Visualizacion-de-filtros-de-redes-neuronales-en-keras.html)
 exploramos los filtros de una red convolucional (CNN) para entender como esta funcionaba. Esa ves buscamos una
 imagen que maximice la activacion en cada filtro y de esta forma veíamos las características que este estaba
 detectando. Al final del articulo mencionamos el trabajo realizado en Google para crear imágenes de ensueño conocido
@@ -39,13 +39,13 @@ considere solo la textura y estilo de una imagen (arriba en la figura).
 ![Una red CNN descompone la imagen en una serie de filtros.](/assets/posts/style-transfer/diagrama-cnn.jpg)
 
 La imagen solución es una que minimize simultáneamente la diferencia en estilo con la obra de arte y el contenido
-con la fotografiá. Denotando $$x$$ la imagen objetivo, $$x_s$$ la foto original y $$a_t$$ la obra de arte,
+con la fotografiá. Denotando $x$ la imagen objetivo, $x_s$ la foto original y $a_t$ la obra de arte,
 la función de perdida a minimizar es,
 
 $$\min_x \mathcal{L}=\frac{1}{2}(C(x)-C(x_s))^2-\lambda\frac{1}{2}(S(x_s)-S(a_t))^2$$
 
-La expresión $$(C(x)-C(x_s))^2$$ es la diferencia en el contenido y el termino $$(S(x_s)-S(a_t))^2$$ es la diferencia
-en estilo. El valor de $$\lambda$$ es una constante para indicar una preferencia por el estilo o el contenido en la
+La expresión $(C(x)-C(x_s))^2$ es la diferencia en el contenido y el termino $(S(x_s)-S(a_t))^2$ es la diferencia
+en estilo. El valor de $\lambda$ es una constante para indicar una preferencia por el estilo o el contenido en la
 solución.
 
 ## Implementación en Keras
@@ -101,7 +101,7 @@ Para calcular el error respecto del estilo debemos eliminar las relaciones espac
 filtros. La solución propuesta por Gatys *et al.* [[1]](https://arxiv.org/abs/1508.06576) es usar la
 [matriz de Gram](https://es.wikipedia.org/wiki/Matriz_de_Gram). Definida como la matriz formada por el
 producto punto entre todos los vectores pertenecientes al conjunto. La forma mas simple de implementarlo
-es como la multiplicación $$AA^T$$ para una matriz $$A$$ cuyas filas sean los vectores requeridos.
+es como la multiplicación $AA^T$ para una matriz $A$ cuyas filas sean los vectores requeridos.
 Adicionalmente el estilo es escala por la cantidad de elementos en la imagen.
 
 
@@ -190,7 +190,7 @@ Después de aproximadamente 10 minutos en una GPU este es el resultado
 
 Nada mal para solo unas 100 lineas de código.
 Ahora tu también puedes usar esta técnica para convertir tus fotos en obras de arte.
-Prueba modificando los parámetros del algoritmo. ¿Como se comporta si $$\lambda$$ disminuye?
+Prueba modificando los parámetros del algoritmo. ¿Como se comporta si $\lambda$ disminuye?
 ¿Qué pasa si usas otras capas para calcular el estilo?.
 
 Como vimos en este articulo las características aprendidas por redes de CNN son capaces de generalizarse para

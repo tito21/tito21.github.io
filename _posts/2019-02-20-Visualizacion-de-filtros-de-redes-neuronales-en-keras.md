@@ -6,28 +6,50 @@ date: 2019-02-18 22:22:43 -0300
 use_math: true
 categories: ["Python", "redes neuronales", "programacion", "visualizacion", "tutorial"]
 tags: ["CNN", "AI", "ML", "redes neuronales", "MRI"]
+description: Exploraremos lo que aprende una red neuronal a partir de una
+             visualización de sus filtros.
+
+
 ---
 # ¿Qué aprenden las redes neuronales?
 
-Durante el ultimo año he esta aprendiendo sobre aprendizaje de maquina (ML) específicamente en redes neuronales convencionales (CNN) aplicado a imágenes de resonancia magnética (MRI).
-En este articulo voy a explorar como las CNN interpretan las imágenes que le damos de entrada y como las activaciones se propagan por las diferentes capas de la red.
-Este articulo esta basado en este [post](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html) por Francois Chollet creador de Keras.
+Durante el ultimo año he esta aprendiendo sobre aprendizaje de maquina (ML)
+específicamente en redes neuronales convencionales (CNN) aplicado a imágenes de
+resonancia magnética (MRI). En este articulo voy a explorar como las CNN
+interpretan las imágenes que le damos de entrada y como las activaciones se
+propagan por las diferentes capas de la red. Este articulo esta basado en este
+[post](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html)
+por Francois Chollet creador de Keras.
 
-Las CNNs aprenden una serie de filtros que aplican a las imágenes de entrada para lograr un objetivo (ej clasificación, reconstrucción, etc)
-Para poder interpretar como la red interpreta las imágenes es útil visualizar los filtros.
-Nuestro objetivo sera buscar una imagen que maximice el activación de una de uno de los filtros en las capas convulucionales de la red. Esta técnica es útil para corroborar que la red halla aprendido características pertinentes para resolver el problema.
-Ademas es la técnica que se utiliza para generar las imágenes de [Deep Dream](https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html)
+Las CNNs aprenden una serie de filtros que aplican a las imágenes de entrada
+para lograr un objetivo (ej clasificación, reconstrucción, etc) Para poder
+interpretar como la red interpreta las imágenes es útil visualizar los filtros.
+Nuestro objetivo sera buscar una imagen que maximice el activación de una de uno
+de los filtros en las capas convulucionales de la red. Esta técnica es útil para
+corroborar que la red halla aprendido características pertinentes para resolver
+el problema. Ademas es la técnica que se utiliza para generar las imágenes de
+[Deep
+Dream](https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html)
 
 ## Cargando la red
 
-Vamos a usar un red U-net propuesta en el 2015 [[1]](https://arxiv.org/abs/1505.04597) para la segmentación de imágenes biomédica.
-En esta red consta de dos partes, una primera compresora las imágenes reduciendo sus dimensiones y luego parte decodificadora que aumenta el tamaño de la imagen recuperando la imagen original.
-La innovación en esta red esta en que tiene conexiones que conectan alternadamente las dos partes de la red facilitando el flujo de información a través de ella.
+Vamos a usar un red U-net propuesta en el 2015
+[[1]](https://arxiv.org/abs/1505.04597) para la segmentación de imágenes
+biomédica. En esta red consta de dos partes, una primera compresora las imágenes
+reduciendo sus dimensiones y luego parte decodificadora que aumenta el tamaño de
+la imagen recuperando la imagen original. La innovación en esta red esta en que
+tiene conexiones que conectan alternadamente las dos partes de la red
+facilitando el flujo de información a través de ella.
 
-Durante el mes pasado la utilice para mejora la reconstrucción de imágenes de resonancia magnética.
-Básicamente esta red toma una imagen *undersample* en el espacio de la frecuencia y la reconstruye para que no se noten los artefactos del [*aliasing*](https://es.wikipedia.org/wiki/Aliasing)[^1].
-Esta red yo ya la configure y entrene usando imágenes simuladas (vivan los círculos y rectángulos). La red completa, junto sus pesos esta disponible [aquí](https://drive.google.com/file/d/1v4uk8s5aU09g-iIidWJ97QbO2Uk2p1H8/view?usp=sharing).
-Algunas imágenes del set de entrenamiento, la reconstrucción mejorada y su version con *aliasing*.
+Durante el mes pasado la utilice para mejora la reconstrucción de imágenes de
+resonancia magnética. Básicamente esta red toma una imagen *undersample* en el
+espacio de la frecuencia y la reconstruye para que no se noten los artefactos
+del [*aliasing*](https://es.wikipedia.org/wiki/Aliasing)[^1]. Esta red yo ya la
+configure y entrene usando imágenes simuladas (vivan los círculos y
+rectángulos). La red completa, junto sus pesos esta disponible
+[aquí](https://drive.google.com/file/d/1v4uk8s5aU09g-iIidWJ97QbO2Uk2p1H8/view?usp=sharing).
+Algunas imágenes del set de entrenamiento, la reconstrucción mejorada y su
+version con *aliasing*.
 
 ![Ejemplo de entrada, salida y valor verdadero de la red ](/assets/posts/visualizacion-filtros-keras/ej1.png)
 ![Ejemplo de entrada, salida y valor verdadero de la red ](/assets/posts/visualizacion-filtros-keras/ej2.png)
@@ -119,7 +141,8 @@ model.summary()
     __________________________________________________________________________________________________
 
 
-Ya cargado el modelo, definimos una función que maximice uno de los filtros de la entrada
+Ya cargado el modelo, definimos una función que maximice uno de los filtros de
+la entrada
 
 
 ```python
@@ -145,8 +168,8 @@ grads /= (K.sqrt(K.mean(K.square(grads))) + 1e-5)
 iterate = K.function([input_img], [loss, grads])
 ```
 
-Usando la función de Keras que definimos podemos subir en el gradiente buscando la imagen que maximice el filtro.
-Esto puede tomar unos cuantos segundos.
+Usando la función de Keras que definimos podemos subir en el gradiente buscando
+la imagen que maximice el filtro. Esto puede tomar unos cuantos segundos.
 
 
 ```python
@@ -170,11 +193,13 @@ plt.show()
 
 ![png](/assets/posts/visualizacion-filtros-keras/output_6_0.png)
 
-Esta es la imagen que maximiza la activación del primer filtro de la primera convulucional de la red.
+Esta es la imagen que maximiza la activación del primer filtro de la primera
+convulucional de la red.
 
 ## Listo
 
-Ahora podemos generalizar un poco el código y calcular la maxima activación para algunos de los filtros en cada capa.
+Ahora podemos generalizar un poco el código y calcular la maxima activación para
+algunos de los filtros en cada capa.
 
 
 ```python
@@ -230,30 +255,42 @@ for name, filt in layers:
 ![png](/assets/posts/visualizacion-filtros-keras/output_8_6.png)
 
 
-La mayoría de los filtros son selectores de  lineas verticales y horizontales, lo que tiene sentido dada la forma del *aleasing*.
-En las capas superiores las lineas se comienzan a separar más indicando que la detección esta a un nivel mas global.
-Luego en las capas de *decoding* las activaciones se vuelven con una textura casi constante lo que refleja que se esta tratando de reconstruir la imagen.
-Otra observación importante es lo que hay varios filtros dedicadas a manejar los bordes.
+La mayoría de los filtros son selectores de  lineas verticales y horizontales,
+lo que tiene sentido dada la forma del *aleasing*. En las capas superiores las
+lineas se comienzan a separar más indicando que la detección esta a un nivel mas
+global. Luego en las capas de *decoding* las activaciones se vuelven con una
+textura casi constante lo que refleja que se esta tratando de reconstruir la
+imagen. Otra observación importante es lo que hay varios filtros dedicadas a
+manejar los bordes.
 
-Ademas, existen varias capas que pareciera que detectan solo ruido por lo que probablemente se podrían reducir la cantidad de filtros y mantener la calidad de los resultados.
+Ademas, existen varias capas que pareciera que detectan solo ruido por lo que
+probablemente se podrían reducir la cantidad de filtros y mantener la calidad de
+los resultados.
 
 Es sorprendente lo poco que entendemos de como aprenden las redes neuronales.
-Poder visualizar los filtros de nos abre una puerta para poder evaluar lo que realmente aprende nuestra red.
-Pero es aun un area en donde hay mucho que investigar.
+Poder visualizar los filtros de nos abre una puerta para poder evaluar lo que
+realmente aprende nuestra red. Pero es aun un area en donde hay mucho que
+investigar.
 
 ## DeepDream
 
-Una de las aplicaciones interesante de esta  tecnología es la creación de imágenes que parecen de un sueño.
-En lugar de partir con ruido si se parte de fotografiás y maximizando la activación de un filtro la imagen generada parece venir de un sueño.
+Una de las aplicaciones interesante de esta  tecnología es la creación de
+imágenes que parecen de un sueño. En lugar de partir con ruido si se parte de
+fotografiás y maximizando la activación de un filtro la imagen generada parece
+venir de un sueño.
 
-Si se activa uno de los primeros filtros comienzan a aparecer patrones simples como lineas o círculos.
-Pero si se activan alguna de las capas más profundas comienzan a aparecer patrones más complejos que asemejan las clases con las que fue entrenada la red.
-Imágenes de Google AI Blog 2015.
+Si se activa uno de los primeros filtros comienzan a aparecer patrones simples
+como lineas o círculos. Pero si se activan alguna de las capas más profundas
+comienzan a aparecer patrones más complejos que asemejan las clases con las que
+fue entrenada la red. Imágenes de Google AI Blog 2015.
 
 ![Left: Original painting by Georges Seurat. Right: processed images by Matthew McNaughton, Software Engineer](https://4.bp.blogspot.com/-PK_bEYY91cw/VYIVBYw63uI/AAAAAAAAAlo/iUsA4leua10/s640/seurat-layout.png)
 
 ![Nubes](https://4.bp.blogspot.com/-FPDgxlc-WPU/VYIV1bK50HI/AAAAAAAAAlw/YIwOPjoulcs/s640/skyarrow.png)
 
-Puedes [descargar](/assets/posts/visualizacion-filtros-keras/notebook.ipynb) este articulo como un cuaderno Jupyter. El código del post original de Keras esta disponible en [GitHub](https://github.com/keras-team/keras/blob/master/examples/conv_filter_visualization.py)
+Puedes [descargar](/assets/posts/visualizacion-filtros-keras/notebook.ipynb)
+este articulo como un cuaderno Jupyter. El código del post original de Keras
+esta disponible en
+[GitHub](https://github.com/keras-team/keras/blob/master/examples/conv_filter_visualization.py)
 
 [^1]: La adquisición de imágenes de MR  se realiza en el dominio de la frecuencia o [espacio *k*](https://en.wikipedia.org/wiki/K-space_(magnetic_resonance_imaging)). Una forma de acelerar el tiempo requerido en la adquisición es saltar datos de frecuencia y por tanto violando el criterio de [Nyquist](https://es.wikipedia.org/wiki/Teorema_de_muestreo_de_Nyquist-Shannon), lo que genera la aparición de replicas o *aliasing*. [Aqui](https://mriquestions.com/compressed-sensing.html) puedes leer mas sobre el tema.

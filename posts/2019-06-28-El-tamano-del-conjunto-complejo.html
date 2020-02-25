@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=../assets/style.css>
+
+        <!-- Mathjax -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!-- -->
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:300,400,700&display=swap" rel="stylesheet">
+        <style></style>
+
+                <meta name="description" content="Algunos infinitos son más grandes que otros… Entre los números racionales y los numeros reales esto es cierto, ¿Pero entre los números reales e imaginarios, también son los complejos más numerosos?">
+                <meta>
+                <meta name="author" content="Alberto Di Biase">
+                        <meta name="dcterms.date" content="">
+                <title>El tamaño del conjunto complejo - Alberto Di Biase</title>
+
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">
+                <a href=https://tito21.github.io/index.html>Alberto Di Biase</a>
+            </h1>
+            <nav>
+                <ul class="nav-list">
+                                            <li><a href=https://tito21.github.io/about.html>About</a></li>
+                                            <li><a href=https://tito21.github.io/categories.html>Categories</a></li>
+                                    </ul>
+            </nav>
+        </header>
+        <article class="main-article">
+            <h1 class="article-title">El tamaño del conjunto complejo</h1>
+            <div class="sub-title">
+                                    <span>2019-06-24 22:22:43 -0300</span>
+                                <ul>
+                                            <li><a href=https://tito21.github.io/categories.html#matematicas>matematicas</a></li>
+                                            <li><a href=https://tito21.github.io/categories.html#numeros>numeros</a></li>
+                                    </ul>
+            </div>
+
+<p>El otro día mientras caminaba de regreso a casa recordé la explicación de mi profesor de precálculo <a href="http://www.mat.uc.cl/~mponcea/index.html">Mario Ponce</a> sobre la cantidad de los números en el conjunto racional (fracciones <span class="math inline">\(\mathbb{Q}\)</span>) y el real (<span class="math inline">\(\mathbb{R}\)</span>). Mi profesor explico que en una recta los números racionales tiene “hoyos” en comparación a la recta de los reales. Nos explico que siempre es posible encontrar una cantidad infinita de reales entre dos racionales y ese infinito contiene más elementos que todo el conjunto de los racionales. Al caminar se me ocurrió preguntarme que pasa entre los reales y el siguiente conjunto de números, los complejos. ¿Existirán más complejos que reales? Los complejos son como dos números reales (<span class="math inline">\(a+ib\)</span>) por lo que deberían ser más grandes pero mi experiencia me dice que en las matemáticas no siempre la primera respuesta es la correcta.</p>
+<h1 id="cardinalidad-de-un-conjunto">Cardinalidad de un conjunto</h1>
+<p>Formalmente la cantidad de elementos en un conjunto se llama cardinalidad. Por ejemplo el conjunto <span class="math inline">\(S=\{1, 3, 5, 6, 8\}\)</span> contiene 5 elementos por lo tanto su cardinalidad es 5. Usualmente se denota <span class="math inline">\(|S|\)</span> o <span class="math inline">\(\#S\)</span>. Cuando dos conjuntos tienen la misma cantidad de elementos, es decir, <span class="math inline">\(|S_1|=|S_2|\)</span>$ existe una función<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> que relaciona cada elemento de <span class="math inline">\(S_1\)</span> con uno de <span class="math inline">\(S_2\)</span>. Por ejemplo los elementos del conjunto y <span class="math inline">\(S_2=\{1, 4, 9, 16 \}\)</span> se pueden escribir a partir de los cuadrados del conjunto <span class="math inline">\(S_1=\{1, 2, 3, 4 \}\)</span>. En este caso la función es <span class="math inline">\(x^2\)</span>. Esta definición se puede usar incluso para conjuntos con una cantidad infinita de elementos. Por ejemplo el conjunto <span class="math inline">\(P=\{0, 2, 4, 6, 8, ... \}\)</span> de los números pares tiene la misma cardinalidad que el conjunto de todos los naturales <span class="math inline">\(\mathbb{N}=\{0, 1, 2, 3, 4, ...\}\)</span> ya que los pares se pueden escribir a partir de los naturales como <span class="math inline">\(2n\)</span>, por lo tanto <span class="math inline">\(|P|=|\mathbb{N}|\)</span>. Cuando existe este mapa o función entre dos conjuntos se dice que existe una biyeccion entre ambos.</p>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Aplicaci%C3%B3n_2_inyectiva_sobreyectiva04.svg" alt="" /><figcaption>biyeccion de conjuntos (de Wikipedia.org)</figcaption>
+</figure>
+<p>Un resultado sorprendente es que existen conjuntos con cantidad infinita de elelmentos que tienen menos elementos que otro conjunto infinito. El mejor ejemplo de esto es la relacion entre el conjunto real y el racional. Como me explico mi profesor la cardinalidad del conjunto real es mayor a la del conjunto de los racionales, porque no es posible establecer una relación entre los conjuntos. La demostracion de esto se puede hacer a traves de la diagonal de Cantor como explica James Grime para Numberphile en este <a href="https://youtu.be/elvOZm0d4H0">video</a>.</p>
+<h1 id="cardinalidad-del-conjunto-complejo">Cardinalidad del conjunto complejo</h1>
+<p>Para poder responder la pregunta de este articulo debemos verificar que existe una función biyectiva entre el conjunto complejo y el real. Una forma de pensar en este problema es buscar una forma de transformar un numero real en uno complejo (y solo uno). Recordando que un complejo tiene la forma <span class="math inline">\(a+ib\)</span> tenemos que encontrar una forma de conectar un numero <span class="math inline">\(x\)</span> con <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. Si representamos el numero real como una serie de dígitos, <span class="math inline">\(0.x_1x_2x_3...\)</span> podemos tomar los dígitos pares para formar la parte real y los impares para la parte imaginaria teniendo asi el numero <span class="math inline">\(0.x_2x_4 + i0.x_1x_3\)</span>. Dado que existe más de una forma de representar algunos números (ej. <span class="math inline">\(0.999... 1\)</span>) debemos preocuparnos de usar la representacion con menos digitos (<span class="math inline">\(1\)</span> en el caso anterior). Esta biyeccion nos permite transformar un numero real en uno complejo por lo que es posible utilizarla para demostrar la igualdad de la cardinalidad entre el conjunto complejo y el real.</p>
+<p>Otra forma de demostrar este resultado que descubrí investigando para este articulo es usar curva rellenadora del espacio (<em>space-filling curves</em>). Estas curvas se construyen iterativamente a partir de reglas simples que en cada iteración cobren mas y mas lugares del plano. Estas fueron uno de los primeros ejemplos de los fractales. Fueron usadas por primera vez por Peano para responder esta misma pregunta en 1900. Peano utilizo la curva</p>
+<figure>
+<img src="../../assets/posts/conjuntos-cardinalidad/Peano2.gif" alt="" /><figcaption>Curva de Peano</figcaption>
+</figure>
+<p>Otra curva popular es la curva de Hilbert</p>
+<figure>
+<img src="../../assets/posts/conjuntos-cardinalidad/Hilbert2.gif" alt="" /><figcaption>Curva de Hilbert</figcaption>
+</figure>
+<p>Estas curvas son continuas y pueden recorrerse sin salirse nunca de la linea. En términos más avanzados se pueden parametrizar con una sola variable, pero recorren todo el espacio 2D. Luego pueden usarse como un mapa entre un valor unidimensional y el plano.</p>
+<p>Estas curvas me hicieron recordar a otra función que había visto <span class="math inline">\(a\sin(ax)\)</span> que también al hacer <span class="math inline">\(a\rightarrow\infty\)</span> también rellena todo el espacio. Aunque esta no están elegante ni agradable a la vista como la de Peano también cumple con rellenar el espacio y ser continua asi que también sirve como una biyecion entre el conjunto complejos y el real.</p>
+<figure>
+<img src="../../assets/posts/conjuntos-cardinalidad/sin2.gif" alt="" /><figcaption>Curva a sin(ax)</figcaption>
+</figure>
+<p>Dado que el conjunto complejo y <span class="math inline">\(\mathbb{R}^2\)</span> son homólogos, también hemos mostrado que el infinito del espacio es igual al de una recta. Lo que hemos logrado descubrir es muy sorprendente y a primera vista puede parecer extraño. Pero eso es lo bonito de las matemáticas, la verdad puede esconderse pero siempre aflora cuando uno intenta buscarla.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>La función debe ser biyectiva o 1 a 1, es decir, debe asignar un elemento único del recorrido a cada elemento del dominio.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+        </article>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-colm">
+                    <a href=https://tito21.github.io>Alberto Di Biase</a>
+                    <ul>
+                                                    <li><a href=about.html>About</a></li>
+                                                    <li><a href=categories.html>Categories</a></li>
+                                            </ul>
+                </div>
+                <div class="footer-colm">
+                    Redes Sociales:
+                    <ul>
+                                                    <li><a href=https://github.com/tito21/>github</a></li>
+                                                    <li><a href=https://www.reddit.com/user/AlbertoDiBiase>reddit</a></li>
+                                            </ul>
+                </div>
+                <div class="footer-colm" style="text-align: left;">
+                    <p>Estudiante de Ingeniería Biomédica en la Pontificia Universidad Católica de Chile (UC). Mis pasiones son programar, los numeros y la enseñanza.</p>
+                </div>
+            </div>
+        </footer>
+        <div class="close-message">
+            <p>Todo el contenido de esta pagina esta bajo la Licencia <a
+            href="http://creativecommons.org/licenses/by-sa/4.0/">CC-by-sa</a> y
+            el código bajo la licencia <a
+            href="https://choosealicense.com/licenses/mit/">MIT</a></p>
+
+                <p>Sitio alojado en <a href="github.com">GitHub</a> y producido
+                con YASSG</p>
+        </div>
+    </body>
+
+</html>

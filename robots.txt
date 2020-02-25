@@ -1,1 +1,1 @@
-Sitemap: https://tito21.github.io/sitemap.xml
+Sitemap: https://site.com/sitemap.xml

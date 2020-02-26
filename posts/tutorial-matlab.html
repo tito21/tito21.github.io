@@ -122,19 +122,19 @@ code span.wa { color: #da4453; } /* Warning */</style>
 <p>Crear una variable es muy similar a otros lenguajes</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">% Esto es un comentario para que pueda entender mejor</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co">% el codigo</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>num = <span class="fl">3</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>str = <span class="st">&#39;una palabra&#39;</span></span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="va">num</span> <span class="op">=</span> <span class="fl">3</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="va">str</span> <span class="op">=</span> <span class="ss">&#39;una palabra&#39;</span></span></code></pre></div>
 <pre>
 num = 3
 str = 'una palabra'
 </pre>
 <p>El punto fuerte de Matlab es el manejo de vectores y arreglos. Estos se definen con corchetes cuadrados, separando las columnas con espacios y las filas con punto y coma (<code>;</code>).</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">% Vectores columna</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>b = [<span class="fl">5</span>; <span class="fl">6</span>]</span>
-<span id="cb2-3"><a href="#cb2-3"></a>x = [<span class="fl">3</span>; <span class="fl">5</span>]</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="va">b</span> <span class="op">=</span> [<span class="fl">5</span><span class="op">;</span> <span class="fl">6</span>]</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="va">x</span> <span class="op">=</span> [<span class="fl">3</span><span class="op">;</span> <span class="fl">5</span>]</span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="co">% Matrices</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>A = [<span class="fl">2</span> <span class="fl">3</span>; <span class="fl">5</span> <span class="fl">6</span>]</span>
-<span id="cb2-6"><a href="#cb2-6"></a>D = [<span class="fl">2</span> <span class="fl">0</span>; <span class="fl">0</span> <span class="fl">2</span>]</span></code></pre></div>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="va">A</span> <span class="op">=</span> [<span class="fl">2</span> <span class="fl">3</span><span class="op">;</span> <span class="fl">5</span> <span class="fl">6</span>]</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="va">D</span> <span class="op">=</span> [<span class="fl">2</span> <span class="fl">0</span><span class="op">;</span> <span class="fl">0</span> <span class="fl">2</span>]</span></code></pre></div>
 <pre>
 b = 2×1
      5
@@ -151,107 +151,107 @@ D = 2×2
 
 </pre>
 <p>Manipular matices es muy similar a la notación matemática estándar. El producto matricial o producto punto se calcula usando <code>*</code>, mientras que el una multiplicacion punto a punto se escribe con <code>.*</code>. En general las operaciones se realizan en orden fila columna como en algebra mientras que anteponer un punto se realiza punto a punto.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb3-1"><a href="#cb3-1"></a>A&#39; <span class="co">% Transponer la matriz A</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>ans = <span class="fl">2</span>×<span class="fl">2</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">A</span><span class="op">&#39;</span> <span class="co">% Transponer la matriz A</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">2</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>     <span class="fl">2</span>     <span class="fl">5</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>     <span class="fl">3</span>     <span class="fl">6</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>A*D</span>
-<span id="cb3-6"><a href="#cb3-6"></a>ans = <span class="fl">2</span>×<span class="fl">2</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="va">A</span><span class="op">*</span><span class="va">D</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">2</span></span>
 <span id="cb3-7"><a href="#cb3-7"></a>     <span class="fl">4</span>     <span class="fl">6</span></span>
 <span id="cb3-8"><a href="#cb3-8"></a>    <span class="fl">10</span>    <span class="fl">12</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>A.*D</span>
-<span id="cb3-10"><a href="#cb3-10"></a>ans = <span class="fl">2</span>×<span class="fl">2</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="va">A</span><span class="op">.*</span><span class="va">D</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">2</span></span>
 <span id="cb3-11"><a href="#cb3-11"></a>     <span class="fl">4</span>     <span class="fl">0</span></span>
 <span id="cb3-12"><a href="#cb3-12"></a>     <span class="fl">0</span>    <span class="fl">12</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>A^num</span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="va">A</span><span class="op">^</span><span class="va">num</span></span>
 <span id="cb3-14"><a href="#cb3-14"></a><span class="co">% equivalente a A*A*A</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a>ans = <span class="fl">2</span>×<span class="fl">2</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">2</span></span>
 <span id="cb3-16"><a href="#cb3-16"></a>   <span class="fl">158</span>   <span class="fl">201</span></span>
 <span id="cb3-17"><a href="#cb3-17"></a>   <span class="fl">335</span>   <span class="fl">426</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>A.^num</span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="va">A</span><span class="op">.^</span><span class="va">num</span></span>
 <span id="cb3-19"><a href="#cb3-19"></a><span class="co">% equivalente a (a_ij)*(a_ij)*(a_ij) para cada elemento a_ij de la matriz A</span></span>
-<span id="cb3-20"><a href="#cb3-20"></a>ans = <span class="fl">2</span>×<span class="fl">2</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">2</span></span>
 <span id="cb3-21"><a href="#cb3-21"></a>     <span class="fl">8</span>    <span class="fl">27</span></span>
 <span id="cb3-22"><a href="#cb3-22"></a>   <span class="fl">125</span>   <span class="fl">216</span></span>
-<span id="cb3-23"><a href="#cb3-23"></a>x + b</span>
-<span id="cb3-24"><a href="#cb3-24"></a>ans = <span class="fl">2</span>×<span class="fl">1</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="va">x</span> <span class="op">+</span> <span class="va">b</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">1</span></span>
 <span id="cb3-25"><a href="#cb3-25"></a>     <span class="fl">8</span></span>
 <span id="cb3-26"><a href="#cb3-26"></a>    <span class="fl">11</span></span>
-<span id="cb3-27"><a href="#cb3-27"></a>x&#39;*b</span>
-<span id="cb3-28"><a href="#cb3-28"></a>ans = <span class="fl">45</span></span></code></pre></div>
+<span id="cb3-27"><a href="#cb3-27"></a><span class="va">x</span><span class="op">&#39;*</span><span class="va">b</span></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">45</span></span></code></pre></div>
 <p>Aplicando lo que hemos hecho hasta ahora para resolvamos el sistema <span class="math inline">\(Ax = b\)</span></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb4-1"><a href="#cb4-1"></a>x = inv(A)*b</span>
-<span id="cb4-2"><a href="#cb4-2"></a>x = <span class="fl">2</span>×<span class="fl">1</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>   -<span class="fl">4.0000</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb4-1"><a href="#cb4-1"></a><span class="va">x</span> <span class="op">=</span> <span class="va">inv</span>(<span class="va">A</span>)<span class="op">*</span><span class="va">b</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="va">x</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">1</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>   <span class="op">-</span><span class="fl">4.0000</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a>    <span class="fl">4.3333</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>A*x - b</span>
-<span id="cb4-6"><a href="#cb4-6"></a>ans = <span class="fl">2</span>×<span class="fl">1</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="fl">10</span>-<span class="fl">14</span> ×</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="va">A</span><span class="op">*</span><span class="va">x</span> <span class="op">-</span> <span class="va">b</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">1</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="fl">10</span><span class="op">-</span><span class="fl">14</span> ×</span>
 <span id="cb4-8"><a href="#cb4-8"></a>    <span class="fl">0.4441</span></span>
 <span id="cb4-9"><a href="#cb4-9"></a>    <span class="fl">0.8882</span></span>
 <span id="cb4-10"><a href="#cb4-10"></a><span class="co">% Mas eficiente</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a>x = A\b</span>
-<span id="cb4-12"><a href="#cb4-12"></a>x = <span class="fl">2</span>×<span class="fl">1</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a>   -<span class="fl">4.0000</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="va">x</span> <span class="op">=</span> <span class="va">A</span><span class="op">\</span><span class="va">b</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="va">x</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">1</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>   <span class="op">-</span><span class="fl">4.0000</span></span>
 <span id="cb4-14"><a href="#cb4-14"></a>    <span class="fl">4.3333</span></span></code></pre></div>
 <p>Por supuesto las funciones y constantes matemáticas importantes están incorporadas.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="#cb5-1"></a>tau = <span class="fl">2</span>*pi</span>
-<span id="cb5-2"><a href="#cb5-2"></a>tau = <span class="fl">6.2832</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>e = exp(<span class="fl">1</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>e = <span class="fl">2.7183</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>sin(<span class="fl">0.24</span>*tau)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>ans = <span class="fl">0.9980</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>log(e^<span class="fl">2</span>) <span class="co">% logaritmo natural</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>ans = <span class="fl">2.0000</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>exp(<span class="fl">1i</span>*pi) + <span class="fl">1</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>ans = <span class="fl">0.0000e+00</span> + <span class="fl">1.2246e-16i</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="#cb5-1"></a><span class="va">tau</span> <span class="op">=</span> <span class="fl">2</span><span class="op">*</span><span class="va">pi</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="va">tau</span> <span class="op">=</span> <span class="fl">6.2832</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="va">e</span> <span class="op">=</span> <span class="va">exp</span>(<span class="fl">1</span>)</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="va">e</span> <span class="op">=</span> <span class="fl">2.7183</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="va">sin</span>(<span class="fl">0.24</span><span class="op">*</span><span class="va">tau</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">0.9980</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="va">log</span>(<span class="va">e</span><span class="op">^</span><span class="fl">2</span>) <span class="co">% logaritmo natural</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2.0000</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="va">exp</span>(<span class="fl">1i</span><span class="op">*</span><span class="va">pi</span>) <span class="op">+</span> <span class="fl">1</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">0.0000e+00</span> <span class="op">+</span> <span class="fl">1.2246e-16i</span></span></code></pre></div>
 <h1 id="indices">Indices</h1>
 <p>Para referirse a un elemento de un vector se usan los paréntesis redondos <code>()</code>. A diferencia de la mayoría de los lenguajes de computación en matlab los indices comienzan en 1 en lugar de 0. También se pueden separar con comas los indices de la fila y columnas para elegir un elemento en una posición especifica del arreglo.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb6-1"><a href="#cb6-1"></a>x(<span class="fl">1</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>ans = -<span class="fl">4.0000</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>x(<span class="fl">2</span>)</span>
-<span id="cb6-4"><a href="#cb6-4"></a>ans = <span class="fl">4.3333</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>A(<span class="fl">1</span>, <span class="fl">2</span>)</span>
-<span id="cb6-6"><a href="#cb6-6"></a>ans = <span class="fl">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb6-1"><a href="#cb6-1"></a><span class="va">x</span>(<span class="fl">1</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="va">ans</span> <span class="op">=</span> <span class="op">-</span><span class="fl">4.0000</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="va">x</span>(<span class="fl">2</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">4.3333</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="va">A</span>(<span class="fl">1</span><span class="op">,</span> <span class="fl">2</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">3</span></span></code></pre></div>
 <p>El operador <code>:</code> permite establecer un rango o todos los elementos de esa dimension. Esta es una de las funciones más poderosas del lenguaje permite simplificar muchas expresiones.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb7-1"><a href="#cb7-1"></a>Id = eye(<span class="fl">3</span>); <span class="co">% matriz identidad de 3x3, equivalente a Id = [1 0 0; 0 1 0; 0 0 1]</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>Id = <span class="fl">3</span>×<span class="fl">3</span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb7-1"><a href="#cb7-1"></a><span class="va">Id</span> <span class="op">=</span> <span class="va">eye</span>(<span class="fl">3</span>)<span class="op">;</span> <span class="co">% matriz identidad de 3x3, equivalente a Id = [1 0 0; 0 1 0; 0 0 1]</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="va">Id</span> <span class="op">=</span> <span class="fl">3</span>×<span class="fl">3</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>     <span class="fl">1</span>     <span class="fl">0</span>     <span class="fl">0</span></span>
 <span id="cb7-4"><a href="#cb7-4"></a>     <span class="fl">0</span>     <span class="fl">1</span>     <span class="fl">0</span></span>
 <span id="cb7-5"><a href="#cb7-5"></a>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">1</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a>Id(:, <span class="fl">1</span>)</span>
-<span id="cb7-7"><a href="#cb7-7"></a>ans = <span class="fl">3</span>×<span class="fl">1</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="va">Id</span>(<span class="op">:,</span> <span class="fl">1</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">3</span>×<span class="fl">1</span></span>
 <span id="cb7-8"><a href="#cb7-8"></a>     <span class="fl">1</span></span>
 <span id="cb7-9"><a href="#cb7-9"></a>     <span class="fl">0</span></span>
 <span id="cb7-10"><a href="#cb7-10"></a>     <span class="fl">0</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a>Id(<span class="fl">1</span>:<span class="fl">2</span>, <span class="fl">2</span>)</span>
-<span id="cb7-12"><a href="#cb7-12"></a>ans = <span class="fl">2</span>×<span class="fl">1</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="va">Id</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">,</span> <span class="fl">2</span>)</span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="va">ans</span> <span class="op">=</span> <span class="fl">2</span>×<span class="fl">1</span></span>
 <span id="cb7-13"><a href="#cb7-13"></a>     <span class="fl">0</span></span>
 <span id="cb7-14"><a href="#cb7-14"></a>     <span class="fl">1</span></span></code></pre></div>
 <p>El mismo símbolo también nos sirve para crear un rango de datos.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb8-1"><a href="#cb8-1"></a>R = <span class="fl">1</span>:<span class="fl">40</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>R = <span class="fl">1</span>×<span class="fl">40</span></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb8-1"><a href="#cb8-1"></a><span class="va">R</span> <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">40</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="va">R</span> <span class="op">=</span> <span class="fl">1</span>×<span class="fl">40</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>     <span class="fl">1</span>     <span class="fl">2</span>     <span class="fl">3</span>     <span class="fl">4</span>     <span class="fl">5</span>     <span class="fl">6</span>     <span class="fl">7</span>     <span class="fl">8</span>     <span class="fl">9</span>    <span class="fl">10</span>    <span class="fl">11</span>    <span class="fl">12</span>    <span class="fl">13</span>    <span class="fl">14</span>    <span class="fl">15</span>    <span class="fl">16</span>    <span class="fl">17</span>    <span class="fl">18</span>    <span class="fl">19</span>    <span class="fl">20</span>    <span class="fl">21</span>    <span class="fl">22</span>    <span class="fl">23</span>    <span class="fl">24</span>    <span class="fl">25</span>    <span class="fl">26</span>    <span class="fl">27</span>    <span class="fl">28</span>    <span class="fl">29</span>    <span class="fl">30</span>    <span class="fl">31</span>    <span class="fl">32</span>    <span class="fl">33</span>    <span class="fl">34</span>    <span class="fl">35</span>    <span class="fl">36</span>    <span class="fl">37</span>    <span class="fl">38</span>    <span class="fl">39</span>    <span class="fl">40</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>Y = <span class="fl">1</span>:<span class="fl">0.1</span>:<span class="fl">40</span> <span class="co">% inicio:delta:fin</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>Y = <span class="fl">1</span>×<span class="fl">391</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="va">Y</span> <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">0.1</span><span class="op">:</span><span class="fl">40</span> <span class="co">% inicio:delta:fin</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="va">Y</span> <span class="op">=</span> <span class="fl">1</span>×<span class="fl">391</span></span>
 <span id="cb8-6"><a href="#cb8-6"></a>    <span class="fl">1.0000</span>    <span class="fl">1.1000</span>    <span class="fl">1.2000</span>    <span class="fl">1.3000</span>    <span class="fl">1.4000</span>    <span class="fl">1.5000</span>    <span class="fl">1.6000</span>    <span class="fl">1.7000</span>    <span class="fl">1.8000</span>    <span class="fl">1.9000</span>    <span class="fl">2.0000</span>    <span class="fl">2.1000</span>    <span class="fl">2.2000</span>    <span class="fl">2.3000</span>    <span class="fl">2.4000</span>    <span class="fl">2.5000</span>    <span class="fl">2.6000</span>    <span class="fl">2.7000</span>    <span class="fl">2.8000</span>    <span class="fl">2.9000</span>    <span class="fl">3.0000</span>    <span class="fl">3.1000</span>    <span class="fl">3.2000</span>    <span class="fl">3.3000</span>    <span class="fl">3.4000</span>    <span class="fl">3.5000</span>    <span class="fl">3.6000</span>    <span class="fl">3.7000</span>    <span class="fl">3.8000</span>    <span class="fl">3.9000</span>    <span class="fl">4.0000</span>    <span class="fl">4.1000</span>    <span class="fl">4.2000</span>    <span class="fl">4.3000</span>    <span class="fl">4.4000</span>    <span class="fl">4.5000</span>    <span class="fl">4.6000</span>    <span class="fl">4.7000</span>    <span class="fl">4.8000</span>    <span class="fl">4.9000</span>    <span class="fl">5.0000</span>    <span class="fl">5.1000</span>    <span class="fl">5.2000</span>    <span class="fl">5.3000</span>    <span class="fl">5.4000</span>    <span class="fl">5.5000</span>    <span class="fl">5.6000</span>    <span class="fl">5.7000</span>    <span class="fl">5.8000</span>    <span class="fl">5.9000</span></span></code></pre></div>
 <h1 id="gráficos">Gráficos</h1>
 <p>En Matlab es muy sencillo hacer todo tipo de gráficos. Revisa la ayuda para ver todas las opciones de ploteo disponibles</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb9-1"><a href="#cb9-1"></a>x = <span class="fl">0</span>:<span class="fl">0.1</span>:tau;</span>
-<span id="cb9-2"><a href="#cb9-2"></a>plot(x, sin(x), <span class="st">&#39;r-&#39;</span>);</span>
-<span id="cb9-3"><a href="#cb9-3"></a>hold on</span>
-<span id="cb9-4"><a href="#cb9-4"></a>plot(x, cos(x), <span class="st">&#39;b*&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb9-1"><a href="#cb9-1"></a><span class="va">x</span> <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">0.1</span><span class="op">:</span><span class="va">tau</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="va">plot</span>(<span class="va">x</span><span class="op">,</span> <span class="va">sin</span>(<span class="va">x</span>)<span class="op">,</span> <span class="ss">&#39;r-&#39;</span>)<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="va">hold</span> <span class="va">on</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="va">plot</span>(<span class="va">x</span><span class="op">,</span> <span class="va">cos</span>(<span class="va">x</span>)<span class="op">,</span> <span class="ss">&#39;b*&#39;</span>)</span></code></pre></div>
 <figure>
 <img src="../assets/posts/intro-matlab/fig1.png" alt="" /><figcaption>fig 1</figcaption>
 </figure>
 <p>También podemos crear varios ejes en una misma figura usando <code>subplot()</code></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb10-1"><a href="#cb10-1"></a>subplot(<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span>)</span>
-<span id="cb10-2"><a href="#cb10-2"></a>plot(x, sin(x))</span>
-<span id="cb10-3"><a href="#cb10-3"></a>title(<span class="st">&#39;sin(x)&#39;</span>)</span>
-<span id="cb10-4"><a href="#cb10-4"></a>grid()</span>
-<span id="cb10-5"><a href="#cb10-5"></a>subplot(<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>)</span>
-<span id="cb10-6"><a href="#cb10-6"></a>plot(x, cos(x))</span>
-<span id="cb10-7"><a href="#cb10-7"></a>title(<span class="st">&#39;sin(x)&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb10-1"><a href="#cb10-1"></a><span class="va">subplot</span>(<span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="va">plot</span>(<span class="va">x</span><span class="op">,</span> <span class="va">sin</span>(<span class="va">x</span>))</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="va">title</span>(<span class="ss">&#39;sin(x)&#39;</span>)</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="va">grid</span>()</span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="va">subplot</span>(<span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="va">plot</span>(<span class="va">x</span><span class="op">,</span> <span class="va">cos</span>(<span class="va">x</span>))</span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="va">title</span>(<span class="ss">&#39;sin(x)&#39;</span>)</span></code></pre></div>
 <figure>
 <img src="../assets/posts/intro-matlab/fig2.png" alt="" /><figcaption>fig 2</figcaption>
 </figure>

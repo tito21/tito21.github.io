@@ -50,6 +50,14 @@ img {
     margin: 0 auto;
 }
 
+code:not(.sourceCode) {
+    background: lightgrey;
+    padding: 0.1em 0.3em;
+    /* box-shadow: inset white -2px 2px 8px 2px; */
+    border-radius: 5px;
+    text-shadow: white 1px 1px 1px;
+}
+
 header {
     font-family: 'Nunito', sans-serif;
     font-weight: 500;

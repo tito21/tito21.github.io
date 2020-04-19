@@ -13,9 +13,11 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:300,400,700&display=swap" rel="stylesheet">
         <style></style>
 
+                <meta name="description" content="Tutorial de como usar numeros complejos en excel">
                 <meta>
                 <meta name="author" content="Alberto Di Biase">
-                        <title>Alberto Di Biase</title>
+                        <meta name="dcterms.date" content="">
+                <title>Como usar numeros complejos en Excel - Alberto Di Biase</title>
 
 
     </head>
@@ -34,24 +36,94 @@
             </nav>
         </header>
         <article class="main-article">
-            <h1 class="article-title"></h1>
+            <h1 class="article-title">Como usar numeros complejos en Excel</h1>
             <div class="sub-title">
+                                    <span>2020-04-20 22:00:00 -0300</span>
                                 <ul>
+                                            <li><a href=https://tito21.github.io/categories.html#programacion>programacion</a></li>
+                                            <li><a href=https://tito21.github.io/categories.html#excel>excel</a></li>
+                                            <li><a href=https://tito21.github.io/categories.html#numeros>numeros</a></li>
                                     </ul>
             </div>
 
-<h1 id="yassg-yet-another-static-site-generator">YASSG (yet another static site generator)</h1>
-<p>Usage:</p>
-<ol type="1">
-<li>Write a post in Markdown under the <code>_post</code> directory and include all assets in <code>_assets</code>.</li>
-<li>Run <code>python yassg.py</code>.</li>
-<li>cd into <code>public</code> and commit&amp;push all changes</li>
-<li>cd back into the root directory and commit&amp;push</li>
-</ol>
-<p>The <code>public</code> folder is a manage as a git submodule as the instructions on the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">hugo docs</a>. <strong>Do not delate the folder or any of its contents</strong></p>
-<p>The steps 2 and 3 are manage by <code>deploy.sh</code>. Only writing post and committing to the root repo should be done manually.</p>
-<p>Post with a field <code>draft</code> in the frontmatter will be ignored when building the site.</p>
-<p>For development <code>yassg.py</code> has the options <code>--serve</code> and <code>--draft</code>.</p>
+<p>En muchos casos los numeros reales no son suficientes y deben llegar los numeros complejos para solucionar los problemas. Los numeros complejos extienden a conjunto real <span class="math inline">\(\mathbb{R}\)</span> agregando una nueva dimension “imaginaria” o complementaria perpendicular al eje principal.</p>
+<h1 id="números-complejos-y-excel">Números complejos y Excel</h1>
+<p>Excel soporta trabajar con numeros complejos interpretando celdas con un formato tipo “1+1i” como el numero complejo correspondiste. También es posible usar “j” como la unidad imaginaria (como es popular en ingeniería). Las funciones que permiten trabajar con numeros complejos tienen el prefijo “IM”. Por ejemplo</p>
+<style>
+td:first-child, th:first-child {
+    text-align: center;
+    font-weight: bold;
+    border-right: black solid;
+}
+table td, th {
+    border-right: 2px grey solid;
+    padding-right: 1em;
+
+}
+</style>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1+1i</td>
+<td>=IMABS(A1)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0-1j</td>
+<td>=IMARGUMENT(A2)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1+1i</td>
+<td>1.414214</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0-1j</td>
+<td>-1.570796</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Las funciones disponibles: <code>IMABS</code>, <code>IMARGUMENT</code>, <code>IMDIV</code>, <code>IMSUB</code>, <code>IMADD</code>, <code>IMPRUDUCT</code>, <code>IMCOS</code>, <code>IMSIN</code>, <code>IMTAN</code>, otras agrando el prefijo <code>IM</code>.</p>
+<h2 id="importante">Importante</h2>
+<p>Lo que Excel usa es en realidad una celda de texto para guardar los numeros complejos, lo que significa que no funcionan los operadores aritméticos simples (<code>+</code>, <code>-</code>, <code>*</code> ni <code>/</code>) ni funciones que no tengan , tienes que usar las funciones especializadas.</p>
 
         </article>
 

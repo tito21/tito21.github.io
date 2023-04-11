@@ -1,0 +1,4 @@
+baseURL = 'https://tito21.github.io/'
+languageCode = 'en-us'
+title = 'Alberto Di Biase'
+theme = 'ananke'

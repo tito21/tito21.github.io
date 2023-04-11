@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="512"
+   width="512"
+   id="svg4712"
+   version="1.1"
+   viewBox="0 0 512 512"
+   role="img"
+   aria-label="Reddit">
+  <metadata
+     id="metadata4718">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4716" />
+  <rect
+     ry="256"
+     style="fill:#828282;fill-opacity:1"
+     y="0.76703107"
+     x="-0.76703107"
+     id="rect4688"
+     rx="256"
+     height="512"
+     width="512" />
+  <g
+     style="fill:#ffffff"
+     id="g4698">
+    <ellipse
+       id="ellipse4690"
+       ry="117"
+       rx="166"
+       cy="307"
+       cx="256" />
+    <circle
+       id="circle4692"
+       r="42"
+       cy="256"
+       cx="106" />
+    <circle
+       id="circle4694"
+       r="42"
+       cy="256"
+       cx="407" />
+    <circle
+       id="circle4696"
+       r="32"
+       cy="114"
+       cx="375" />
+  </g>
+  <g
+     style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#82828f;stroke-opacity:0.94117647"
+     id="g4704">
+    <path
+       style="stroke:#f7ffff;stroke-width:16;stroke-opacity:1"
+       id="path4700"
+       d="m 256,196 23,-101 73,15" />
+    <path
+       style="stroke:#828282;stroke-width:13;stroke-opacity:1"
+       id="path4702"
+       d="m 191,359 c 33,25 97,26 130,0" />
+  </g>
+  <g
+     transform="translate(3.8351554,-0.76703109)"
+     style="fill:#828282;fill-opacity:1"
+     id="g4710">
+    <circle
+       style="fill:#828282;fill-opacity:1"
+       id="circle4706"
+       r="31"
+       cy="287"
+       cx="191" />
+    <circle
+       style="fill:#828282;fill-opacity:1"
+       id="circle4708"
+       r="31"
+       cy="287"
+       cx="321" />
+  </g>
+</svg>

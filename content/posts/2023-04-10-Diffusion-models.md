@@ -6,7 +6,8 @@ date: 2023-04-10 16:00:00 -0300
 math: true
 categories: ["Python", "ML", "tutorial", "Machine Learning"]
 tags: ["AI", "ML", "neural networks", "diffusion models"]
-description: A recently develop model for data generation
+description: We explain the main components of a new class of generative models
+    called diffusion models
 ---
 
 # Introduction

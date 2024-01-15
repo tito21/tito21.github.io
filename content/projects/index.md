@@ -1,0 +1,23 @@
+---
+title: "Projects"
+date: 2024-01-14T21:59:37-03:00
+menu: main
+---
+
+This is a list of interactive projects I have build
+
+ - [AvantGarble](https://tito21.github.io/AvantGarble/): A Dadaist chatbot.
+ [Code](https://github.com/tito21/AvantGarble)
+ ![AvantGrable](https://github.com/tito21/AvantGarble/blob/main/sample.png?raw=true)
+
+ - [Pointillism](https://tito21.github.io/pointillism/): Draw an image as a
+ layered points. [Code](https://github.com/tito21/pointillism)
+ ![Pointillism](/projects/pointillism.png)
+
+ - [Patchify filter](https://github.com/tito21/patchify/): A filter to draw and
+ image using patches from a database.
+ ![Patchfy filter](https://github.com/tito21/patchify/raw/main/results/francis-color-fine.png)
+
+ - [Halftone filter](https://tito21.github.io/halftone/): A filter that imitates
+ a halftone printing proceses. [Code](https://github.com/tito21/halftone)
+ ![Halftone filter](/projects/halftone.png)

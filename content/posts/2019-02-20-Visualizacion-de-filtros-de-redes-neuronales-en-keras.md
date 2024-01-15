@@ -51,10 +51,10 @@ rectángulos). La red completa, junto sus pesos esta disponible
 Algunas imágenes del set de entrenamiento, la reconstrucción mejorada y su
 version con *aliasing*.
 
-![Ejemplo de entrada, salida y valor verdadero de la red ](posts/visualizacion-filtros-keras/ej1.png)
-![Ejemplo de entrada, salida y valor verdadero de la red ](posts/visualizacion-filtros-keras/ej2.png)
-![Ejemplo de entrada, salida y valor verdadero de la red ](posts/visualizacion-filtros-keras/ej3.png)
-![Ejemplo de entrada, salida y valor verdadero de la red ](posts/visualizacion-filtros-keras/ej4.png)
+![Ejemplo de entrada, salida y valor verdadero de la red ](/posts/visualizacion-filtros-keras/ej1.png)
+![Ejemplo de entrada, salida y valor verdadero de la red ](/posts/visualizacion-filtros-keras/ej2.png)
+![Ejemplo de entrada, salida y valor verdadero de la red ](/posts/visualizacion-filtros-keras/ej3.png)
+![Ejemplo de entrada, salida y valor verdadero de la red ](/posts/visualizacion-filtros-keras/ej4.png)
 
 ```python
 from keras.models import load_model

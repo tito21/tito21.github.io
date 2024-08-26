@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sampling from an image"
+title: "Sampling random numbers from an image"
 slug: "sampling-from-image"
 date: 2024-08-25 19:32:01 +0100
 math: true
@@ -11,10 +11,11 @@ description: I present the Metropolis algorithms to sample random numbers from
 ---
 
 Several times on my coding adventures with images I came into the need to sample
-form an image. For this I mean to get a random number that is more likely to
-land where the image is brighter and less likely were the image is darker. If
-you are familiar with the concept of probability distributions, what I want is
-to treat the image as the probability density function and sample from this.
+random numbers form an image. For this I mean to get a random number that is
+more likely to land where the image is brighter and less likely were the image
+is darker. If you are familiar with the concept of probability distributions,
+what I want is to treat the image as the probability density function and sample
+from this.
 
 The probability density function (or PDF for short) is a function that gives the
 likelihood of picking a particular point. You are probably familiar with the
@@ -135,7 +136,7 @@ You can have a look at the whole application [here](https://github.com/tito21/Im
 ## Notes
 
 There is no need to to normalize the pdf because only it's ratio is important
-and thus the normalizing constant cancels out
+and thus the normalizing constant cancels out.
 
 This implementation is not particularly efficient for real time use.
 

@@ -10,4 +10,4 @@ London on Cardiac diffusion MRI. In this blog, I write about artificial
 intelligence, maths and healthcare.
 
 If you are interested, here is my [CV](https://github.com/tito21/resume/raw/main/CV.pdf).
-And for if you have any questions, feel free to contact me at asdibiase@uc.cl.
+And for if you have any questions, feel free to contact me at asdibiase at uc.cl.

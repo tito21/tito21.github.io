@@ -6,13 +6,13 @@ menu: main
 
 This is a list of projects I have build
 
- - [AvantGarble](https://tito21.github.io/AvantGarble/): A Dadaist chatbot.
- [Code](https://github.com/tito21/AvantGarble)
- ![AvantGrable](https://github.com/tito21/AvantGarble/blob/main/sample.png?raw=true)
+ - [AvantGarble](https://avant-garble-68750635052.europe-west2.run.app/): A Dadaist chatbot.
+ [Code](https://github.com/tito21/avant-garble)
+ ![AvantGrable](https://github.com/tito21/avant-garble/raw/main/client/public/logo.svg)
 
  - [Portraits](https://tito21.github.io/portrait/): A website to make stylish portraits.
  [Code](https://github.com/tito21/portrait)
- ![Portraits](https://github.com/tito21/portrait/blob/main/screenshot.png)
+ ![Portraits](https://github.com/tito21/portrait/raw/main/screenshot.png)
 
  - [Patchify filter](https://github.com/tito21/patchify/): A filter to draw and
  image using patches from a database.

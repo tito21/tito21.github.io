@@ -10,9 +10,9 @@ This is a list of projects I have build
  [Code](https://github.com/tito21/AvantGarble)
  ![AvantGrable](https://github.com/tito21/AvantGarble/blob/main/sample.png?raw=true)
 
- - [Pointillism](https://tito21.github.io/pointillism/): Draw an image as a
- layered points. [Code](https://github.com/tito21/pointillism)
- ![Pointillism](/projects/pointillism.png)
+ - [Portraits](https://tito21.github.io/portrait/): A website to make stylish portraits.
+ [Code](https://github.com/tito21/portrait)
+ ![Portraits](https://github.com/tito21/portrait/blob/main/screenshot.png)
 
  - [Patchify filter](https://github.com/tito21/patchify/): A filter to draw and
  image using patches from a database.

@@ -50,10 +50,10 @@ Crear una variable es muy similar a otros lenguajes
 num = 3
 str = 'una palabra'
 ```
-<pre>
+```
 num = 3
 str = 'una palabra'
-</pre>
+```
 
 El punto fuerte de Matlab es el manejo de vectores y arreglos. Estos se definen
 con corchetes cuadrados, separando las columnas con espacios y las filas con

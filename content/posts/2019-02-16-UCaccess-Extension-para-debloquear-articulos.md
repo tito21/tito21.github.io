@@ -32,11 +32,8 @@ y ~~[Firefox](https://addons.mozilla.org/en-US/firefox/addon/uc-access/)~~. Esta
 diseñada usando la WebExtensions API por lo que debería funcionar en cualquier
 navegador que los soporte (ej.Opera, Edge, Brave, Vivaldi).
 
-<div class="boxed">
-<p>
-Para usar la extension es necesario tener acceso a una cuenta de la Universidad Católica de Chile (un correo @uc.cl).
-</p>
-</div>
+> Para usar la extension es necesario tener acceso a una cuenta de la Universidad Católica de Chile (un correo @uc.cl).
+
 
 La aplicación esta bajo una licencia MIT y el código esta disponible [aquí](https://github.com/tito21/UCaccess).
 Cualquier duda o sugerencia no duden en abrir una *Issue* o enviarme un correo.

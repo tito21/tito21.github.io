@@ -67,7 +67,7 @@ x = [3; 5]
 A = [2 3; 5 6]
 D = [2 0; 0 2]
 ```
-<pre>
+```
 b = 2×1
      5
      6
@@ -80,9 +80,7 @@ A = 2×2
 D = 2×2
      2     0
      0     2
-
-</pre>
-
+```
 Manipular matices es muy similar a la notación matemática estándar. El producto
 matricial o producto punto se calcula usando `*`, mientras que el una
 multiplicacion punto a punto se escribe con `.*`. En general las operaciones se

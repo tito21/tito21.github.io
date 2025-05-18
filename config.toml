@@ -3,9 +3,10 @@ languageCode = 'en-us'
 title = 'Alberto Di Biase'
 sectionPagesMenu = 'main'
 
-
 theme = 'terminal'
-paginate = 5
+
+pagination.pagerSize = 5
+
 
 [params]
 

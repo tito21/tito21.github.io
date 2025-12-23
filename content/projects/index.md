@@ -6,6 +6,11 @@ menu: main
 
 This is a list of projects I have build
 
+ - [Non-Photorealistic rendering by image Tractography](https://github.com/tito21/st-python):
+    A non-photorealistic rendering technique that uses image tractography to create
+    artistic renderings of images. [Preprint](https://arxiv.org/abs/2511.00702v1)
+    ![NPR by Tractography](https://github.com/tito21/st-python/raw/main/test-images/NPRportrait2_stylized.png)
+
  - [AvantGarble](https://avant-garble-68750635052.europe-west2.run.app/): A Dadaist chatbot.
  [Code](https://github.com/tito21/avant-garble)
  ![AvantGrable](https://github.com/tito21/avant-garble/raw/main/client/public/logo.svg)
